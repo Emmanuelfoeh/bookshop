@@ -83,7 +83,6 @@ class BookController {
   };
 
   searchBook = async (req: Request, res: Response) => {
-    console.log("search query", req.query);
     const searchQuery = req.query.search as string;
     try {
       const searchResult = await searchBook(searchQuery);

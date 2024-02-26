@@ -1,5 +1,5 @@
 import inquirer from "inquirer";
-// import { db } from "../server/src/config/db.config";
+import { db } from "../server/src/config/db.config";
 import { Users } from "../server/src/model/user/user.model";
 
 import dotenv from "dotenv";
