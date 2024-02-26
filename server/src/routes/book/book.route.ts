@@ -19,7 +19,8 @@ const upload = multer({ storage: storage });
 
 // const upload = multer({ dest: join(__dirname, "uploads") });
 
-const { addBook, deleteBook, getBook, getBooks, updateBook } = BookControllers;
+const { addBook, deleteBook, searchBook, getBook, getBooks, updateBook } =
+  BookControllers;
 
 //add book route
 bookRouter.post("/", upload.single("picture"), addBook);
@@ -27,13 +28,13 @@ bookRouter.post("/", upload.single("picture"), addBook);
 //get books
 bookRouter.get("/", getBooks);
 
-bookRouter.get("/search", getBooks);
+bookRouter.get("/search", searchBook);
 
 //get single book
 bookRouter.get("/:id", getBook);
 
 //update a book
-bookRouter.put("/:id",upload.single("picture"), updateBook);
+bookRouter.put("/:id", upload.single("picture"), updateBook);
 
 //delete a book
 bookRouter.delete("/:id", deleteBook);

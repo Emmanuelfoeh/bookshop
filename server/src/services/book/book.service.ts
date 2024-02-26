@@ -74,7 +74,6 @@ export class BookService {
         $or: [
           { title: { $regex: regex } },
           { description: { $regex: regex } },
-          { price: { $regex: regex } },
         ],
       });
 
